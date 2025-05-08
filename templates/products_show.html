@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+{% block title %}{{ product['name'] }}{% endblock %}
+
+{% block content %}
+<h1>{{ product['name'] }}</h1>
+
+<img src="{{ url_for('static', filename='images/products/' ~ product['image']) }}"
+     alt="{{ product['name'] }}" class="product-image">
+
+<p><strong>Cena:</strong> {{ product['price'] }} €</p>
+<p><strong>Apraksts:</strong> {{ product['description'] }}</p>
+
+<p><a href="{{ url_for('products') }}">← Atpakaļ uz produktiem</a></p>
+{% endblock %}

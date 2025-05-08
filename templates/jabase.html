@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+<header>
+    <img src="{{ url_for('static', filename='images/products/logo.png') }}" alt="Logo" class="logo">
+    <nav>
+            <a href="/">Sākums</a>
+            <a href="/produkti">Produkti</a>
+            <a href="/comment">Atsauksmes</a>
+            <a href="/par-mums">Par mums</a>
+    </nav>
+    </header>
+    <main>
+        {% block content %}
+        <section class="hero">
+            <h2>Garšas, kas vieno ģimeni</h2>
+            <p>Baudi svaigu, mājās gatavotu ēdienu ar mīlestību!</p>
+        </section>
+        
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; {{ 2025 }} Ēdienkarte</p>
+    </footer>
+</body>
+</html>

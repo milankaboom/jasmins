@@ -1,0 +1,28 @@
+<!-- <h1>Pievienot atsauksmi</h1>
+<form method="POST">
+    <label for="itemsid">Izvēlies ēdienu:</label>
+    <select name="itemsid" required>
+        {% for menu_item in menu_items %}
+        <option value="{{ itemsid }}">{{ menu_item.name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label>Atsauksme:</label><br>
+    <textarea name="comment" required></textarea><br>
+
+    <input type="submit" value="Saglabāt atsauksmi">
+</form> -->
+<h1>Pievienot atsauksmi</h1>
+<form method="POST">
+    <label for="itemsid">Izvēlies ēdienu:</label>
+    <select name="itemsid" required>
+        {% for menu_item in menu_items %}
+        <option value="{{ menu_item.id }}">{{ menu_item.name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label>Atsauksme:</label><br>
+    <textarea name="comment" required></textarea><br>
+
+    <input type="submit" value="Saglabāt atsauksmi">
+</form>

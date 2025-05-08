@@ -1,0 +1,32 @@
+<!-- <h1>Ēdienu atsauksmes</h1>
+<a href="/comment/new">Pievienot atsauksmi</a>
+
+<ul>
+    {% for comment in comments %}
+    <li>
+        <strong>{{ comment.name }}</strong>:<br>
+        {{ comment.comment}}
+        <br>
+        <a href="/comments/edit/{{ comment.id }}">Labot</a>
+        <form action="/comments/delete/{{ comment.id }}" method="POST" style="display:inline;">
+            <button type="submit">Dzēst</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul> -->
+<h1>Ēdienu atsauksmes</h1>
+<a href="/comment/new">Pievienot atsauksmi</a>
+
+<ul>
+    {% for comment in comments %}
+    <li>
+        <strong>{{ comment.name }}</strong>:<br>
+        {{ comment.comment }}
+        <br>
+        <a href="/comment/edit/{{ comment.id }}">Labot</a>
+        <form action="/comment/delete/{{ comment.id }}" method="POST" style="display:inline;">
+            <button type="submit">Dzēst</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>

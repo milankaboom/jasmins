@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e4d7c6;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #319b19;
+    color: rgb(218, 203, 167);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 80px; /* vai 100px, atkarībā no vajadzības */
+    width: auto;
+    display: block;
+    animation: fadeIn 1.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 8px;
+}
+
+ul li:hover {
+    background-color: #e0e0e0;
+}
+
+/* products-list */
+.products-list {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.products-item {
+    max-width: 200px;
+    background-color: #EEE;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+.products-item:hover {
+    background-color: #DDD;
+}
+
+.products-item .product-price {
+    text-align: right;
+    font-size: 23px;
+}
+
+.products-item img {
+        width:100%;      /* vai jebkurš cits platums, piemēram, 150px */
+        height: 200px;     /* vai 'auto', ja vēlies saglabāt proporcijas */
+        object-fit: cover; /* saglabā centrēšanu un aizpilda rāmi, apgriežot malas, ja nepieciešams */
+        display: block;   
+        border-radius: 4px; /* noņem nelielas atstarpes ap bildi */
+}
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* atstarpe starp bildēm */
+    justify-content: center; /* centrē rindā */
+}
+
+ul li {
+    width: 200px; /* atbilst attēla izmēram */
+    text-align: center;
+}
+.welcome {
+    font-size: 2.9em;
+    text-align: center;
+    margin-top: 40px;
+    color: #3e3e3e;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff8ee;
+    border-radius: 12px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #4d3d2b;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #6c5c4c;
+}
+.p{
+    font-size: large;
+}
